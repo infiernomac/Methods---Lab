@@ -1,1 +1,53 @@
+using System;
+using System.Linq;
 
+namespace Calculations
+{
+	class Program
+	{
+		static void AddTwoNumbers (double firstNumber, double secondNumber)
+		{
+			Console.WriteLine(firstNumber + secondNumber);
+		}
+
+		static void MultiplyTwoNumbers(double firstNumber, double secondNumber)
+		{
+			Console.WriteLine(firstNumber * secondNumber);
+		}
+		static void SubtractTwoNumbers(double firstNumber, double secondNumber)
+		{
+			Console.WriteLine(firstNumber - secondNumber);
+		}
+		static void DivideTwoNumbers(double firstNumber, double secondNumber)
+		{
+			Console.WriteLine(firstNumber / secondNumber);
+		}
+
+
+
+		static void Main(string[] args)
+		{
+			string calculation = Console.ReadLine();
+			double firstNumber = double.Parse(Console.ReadLine());
+			double secondNumber = double.Parse(Console.ReadLine());
+
+			if (calculation.Equals("add"))
+			{
+				AddTwoNumbers(firstNumber, secondNumber);
+			}
+			else if (calculation.Equals("multiply"))
+			{
+				MultiplyTwoNumbers(firstNumber, secondNumber);
+			}
+			else if (calculation.Equals("subtract"))
+			{
+				SubtractTwoNumbers(firstNumber, secondNumber);
+			}
+			else
+			{
+				DivideTwoNumbers(firstNumber, secondNumber);
+			}
+
+		}
+	}
+}
