@@ -1,0 +1,40 @@
+using System;
+
+namespace Orders
+{
+	class Program
+	{
+
+		static void PrintOrderPrice (string order, int quantity)
+		{
+			if (order.Equals("coffee"))
+			{
+				double coffeePrice = 1.5;
+				Console.WriteLine($"{quantity * coffeePrice:f2}");
+			}
+			else if (order.Equals("water"))
+			{
+				int waterPrice = 1;
+				Console.WriteLine($"{quantity * waterPrice:f2}");
+			}
+			else if (order.Equals("coke"))
+			{
+				double cokePrice = 1.4;
+				Console.WriteLine($"{quantity  * cokePrice:f2}");
+			}
+			else
+			{
+				int snacksPrice = 2;
+				Console.WriteLine($"{quantity * snacksPrice:f2}");
+			}
+
+		}
+		static void Main(string[] args)
+		{
+			string order = Console.ReadLine();
+			int quantity = int.Parse(Console.ReadLine());
+
+			PrintOrderPrice(order, quantity);
+		}
+	}
+}
