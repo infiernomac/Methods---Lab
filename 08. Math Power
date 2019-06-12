@@ -1,0 +1,21 @@
+using System;
+
+namespace Math_Power
+{
+	class Program
+	{
+		static double MathPower(double numberOne, double numberTwo)
+		{
+			return Math.Pow(numberOne, numberTwo);
+		}
+		static void Main(string[] args)
+		{
+			double numberOne = double.Parse(Console.ReadLine());
+			double numberTwo = double.Parse(Console.ReadLine());
+
+			double mathPower = MathPower(numberOne, numberTwo);
+
+			Console.WriteLine(mathPower);
+		}
+	}
+}
