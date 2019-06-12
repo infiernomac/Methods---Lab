@@ -1,0 +1,85 @@
+using System;
+
+namespace Greater_of_Two_Values
+{
+	class Program
+	{
+		static int GetMax (int imputOne, int imputTwo)
+		{
+			if (imputOne > imputTwo)
+			{
+				return imputOne;
+			}
+			else
+			{
+				return imputTwo;
+			}
+		}
+
+		static char GetMax (char imputOne, char imputTwo)
+		{
+			if (imputOne > imputTwo)
+			{
+				return imputOne;
+			}
+			else
+			{
+				return imputTwo;
+			}
+		}
+
+		static string GetMax(string imputOne, string imputTwo)
+		{
+
+			int sumOne = 0;
+			int sumTwo = 0;
+
+			for (int i = 0; i < imputOne.Length; i++)
+			{
+				sumOne += imputOne[i];
+			}
+
+			for (int i = 0; i < imputTwo.Length; i++)
+			{
+				sumTwo += imputTwo[i];
+			}
+
+			if (imputOne[0] > imputTwo[0])
+			{
+				return imputOne;
+			}
+			else
+			{
+				return imputTwo;
+			}
+		}
+		static void Main(string[] args)
+		{
+			string typeOfValue = Console.ReadLine();
+
+			if (typeOfValue.Equals("int"))
+			{
+				int imputOne = int.Parse(Console.ReadLine());
+				int imputTwo = int.Parse(Console.ReadLine());
+
+				Console.WriteLine(GetMax(imputOne, imputTwo));
+			}
+			else if (typeOfValue.Equals("char"))
+			{
+				char imputOne = char.Parse(Console.ReadLine());
+				char imputTwo = char.Parse(Console.ReadLine());
+
+				Console.WriteLine(GetMax(imputOne, imputTwo));
+			}
+			else
+			{
+				string imputOne = Console.ReadLine();
+				string imputTwo = Console.ReadLine();
+
+				Console.WriteLine(GetMax(imputOne, imputTwo));
+			}
+
+			
+		}
+	}
+}
